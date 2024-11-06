@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Room</title>
+  </head>
+
+  <style>
+    #messages {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid;
+      padding: 10px;
+    }
+    #message-input {
+      width: 78%;
+    }
+    #send-btn,
+    #leave-btn {
+      width: 8%;
+    }
+  </style>
+  <body>
+    <h2>Wellcome to the chat room</h2>
+
+    <div id="username-section">
+      <input type="text" id="username" placeholder="username" />
+      <button onclick="joinChat()">join</button>
+    </div>
+
+    <div id="chat-window" style="display: none">
+      <div id="messages"></div>
+      <input type="text" id="message-input" placeholder="Type here" />
+
+      <button id="send-btn" onclick="sendMessage()">Send</button>
+
+      <button id="leave-btn" onclick="leaveChat()">Leave</button>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
